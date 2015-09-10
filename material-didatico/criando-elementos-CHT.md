@@ -1,5 +1,4 @@
 除了更改我們網頁的樣式，JavaScript也有創造新的HTML元素的能力。
-Além de ajudar a alterar o estilo das nossas páginas, o JavaScript tem o poder de criar novos elementos HTML.
 
 我們透過`document.createElement('div')`指令來創建新的HTML元素，執行以後將會返回一個由指令所創建的元素，所以我們可以將它存進一個變數裡以便之後使用。元素被產生出來了，但是它還沒有被插入到你的網頁裡，這個我們必須用到所選的元素裡面的`.appendChild(child)`指令，例如`getElementById`。透過這個函數只需要將我們要新增的元素傳遞給被選取的元素，像這樣：
 
