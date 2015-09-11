@@ -35,7 +35,7 @@ p { color:#f00; }
 
 有兩種基本的選擇器：普通型與配對型。
 
-一個普通的選擇器是任何一個沒有包含屬性選擇器的，例如ID選擇器、類別選擇器或者偽元素選擇器。以下是一個普通選擇器的例子：
+一個普通的選擇器是任何一個沒有包含屬性選擇器的，例如ID選擇器、類別選擇器或者psudo-element選擇器。以下是一個普通選擇器的例子：
 
 ```css
 p.info { background:#ff0; }
@@ -49,13 +49,13 @@ div p { font-weight:bold; }
 
 上面的規則會套用在所有再div元素裡面的p元素。
 
-Um pseudo-elemento pode ser colocado como apêndice a um seletor. Em seletores combinados, o pseudo-elemento somente poderá ser adicionado como apêndice ao último seletor simples.
+一個pseudo-element可以被依附在一個選擇器上面。在一個配對型選擇器中，pseudo-element只可以被新增依附在最後一個普通的選擇器上。
 
-Mais a frente serão detalhados com mais profundidade os seletores combinados, os elementos de combinação e os pseudo-elementos.
+之後將會再更詳細的解釋關於配對選擇器、配對的元素以及pseudo-elements。
 
-## Seletores Universal
+## Universal Selector （通用選擇器）
 
-O seletor universal é representado por um asterisco, “\*”, e casa com todos os elementos do documento. É raro ver-se empregado em uma folha de estilos, mas o seletor universal é muito usado com seletores tipo ID e seletores de classe. Se o seletor universal não for o único componente de um seletor simples, o “\*” não deve ser usado :
+一個universal selector是以一個星號來代表（\*），他可以與文檔中所有的元素配對。是個不常在樣式表裡見到的選擇器，但是universal selector很常與ID選擇器及class選擇器一起用。如果universal selector不是某個普通選擇器的唯一部份，那就別用「\*」了：
 
   - .myclass é equivalente a \*.myclass
   - \#myid é equivalente a \*#myid
