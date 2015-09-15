@@ -57,20 +57,21 @@ div p { font-weight:bold; }
 
 一個universal selector是以一個星號來代表（\*），他可以與文檔中所有的元素配對。是個不常在樣式表裡見到的選擇器，但是universal selector很常與ID選擇器及class選擇器一起用。如果universal selector不是某個普通選擇器的唯一部份，那就別用「\*」了：
 
-  - .myclass é equivalente a \*.myclass
-  - \#myid é equivalente a \*#myid
+  - .myclass 等於 \*.myclass
+  - \#myid 等於 \*#myid
 
+Universal selector的一個常用的用法是用來把文檔中所有元素的margin跟padding歸零：
 Um uso bastante popular para o seletor universal é o uso para zerar margens e paddings de todos os elementos do documento:
 
 ```css
 * { margin:0; padding:0; }
 ```
 
-Este procedimento é também conhecido como `Global White Space Reset`.
+這個步驟也被稱作「Global White Space Reset」。
 
-## Seletores Tipo
+## Type Selector
 
-Um seletor tipo, casa com qualquer instância de um determinado tipo de elemento. A regra a seguir casa com qualquer elemento (do tipo) parágrafo no documento e configura seu tamanho de fonte para 2em:
+一個Type selector可以與任何一種元素配對。以下的例子可以與檔案中任何段落類型的元素配對，並且將字型大小設定成2em：
 
 ```css
 p { font-size:2em; }
