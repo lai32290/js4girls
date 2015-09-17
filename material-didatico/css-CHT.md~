@@ -35,51 +35,50 @@ p { color:#f00; }
 
 有兩種基本的選擇器：普通型與配對型。
 
-一個普通的選擇器是任何一個沒有包含屬性選擇器的，例如ID選擇器、類別選擇器或者psudo-element選擇器。以下是一個普通選擇器的例子：
+一個普通的選擇器是任何一個沒有包含屬性選擇器的，例如ID選擇器、類別選擇器或者偽元素選擇器。以下是一個普通選擇器的例子：
+Um seletor simples consiste em um tipo qualquer de seletor ou o seletor universal seguido por nenhum ou algum seletor de atributo, seletor tipo ID, seletor de classe ou pseudo-classe. A seguir uma regra contendo um exemplo de seletor simples:
 
 ```css
 p.info { background:#ff0; }
 ```
 
-一個配對型選擇器（有時候也稱作上下文選擇器）是兩個或者更多個以配對元素分開的的普通選擇器。以下有一個配對選擇器的例子。
+Um seletor combinado (algumas vezes chamado de seletor contextual) consiste de dois ou mais seletores simples separados por um elemento de combinação. A seguir um exemplo de seletor combinado.
 
 ```css
 div p { font-weight:bold; }
 ```
 
-上面的規則會套用在所有再div元素裡面的p元素。
+A regra acima aplica-se a todo elemento p que seja descendente do elemento div.
 
-一個pseudo-element可以被依附在一個選擇器上面。在一個配對型選擇器中，pseudo-element只可以被新增依附在最後一個普通的選擇器上。
+Um pseudo-elemento pode ser colocado como apêndice a um seletor. Em seletores combinados, o pseudo-elemento somente poderá ser adicionado como apêndice ao último seletor simples.
 
-之後將會再更詳細的解釋關於配對選擇器、配對的元素以及pseudo-elements。
+Mais a frente serão detalhados com mais profundidade os seletores combinados, os elementos de combinação e os pseudo-elementos.
 
-## Universal Selector （通用選擇器）
+## Seletores Universal
 
-一個universal selector是以一個星號來代表（\*），他可以與文檔中所有的元素配對。是個不常在樣式表裡見到的選擇器，但是universal selector很常與ID選擇器及class選擇器一起用。如果universal selector不是某個普通選擇器的唯一部份，那就別用「\*」了：
+O seletor universal é representado por um asterisco, “\*”, e casa com todos os elementos do documento. É raro ver-se empregado em uma folha de estilos, mas o seletor universal é muito usado com seletores tipo ID e seletores de classe. Se o seletor universal não for o único componente de um seletor simples, o “\*” não deve ser usado :
 
-  - .myclass 等於 \*.myclass
-  - \#myid 等於 \*#myid
+  - .myclass é equivalente a \*.myclass
+  - \#myid é equivalente a \*#myid
 
-Universal selector的一個常用的用法是用來把文檔中所有元素的margin跟padding歸零：
+Um uso bastante popular para o seletor universal é o uso para zerar margens e paddings de todos os elementos do documento:
 
 ```css
 * { margin:0; padding:0; }
 ```
 
-這個步驟也被稱作「Global White Space Reset」。
+Este procedimento é também conhecido como `Global White Space Reset`.
 
-## Type Selector
+## Seletores Tipo
 
-一個Type selector可以與任何一種元素配對。以下的例子可以與檔案中任何段落類型的元素配對，並且將字型大小設定成2em：
+Um seletor tipo, casa com qualquer instância de um determinado tipo de elemento. A regra a seguir casa com qualquer elemento (do tipo) parágrafo no documento e configura seu tamanho de fonte para 2em:
 
 ```css
 p { font-size:2em; }
 ```
 
-### 選擇器 - 類別
 ### Seletor – classe
 
-類別的選擇器是用一個點來代表「.」，
 O seletor de classe é representado por um ponto, “.”, e tem como alvo elementos com um determinado valor para seu atributo class. A regra a seguir aplica-se a todo elemento parágrafo cuja classe tenha o nome “info”:
 
 ```css
