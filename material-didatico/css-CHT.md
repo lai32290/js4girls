@@ -55,7 +55,7 @@ div p { font-weight:bold; }
 
 ## Universal Selectors
 
-Universal selector 是由一個星號來代表，「\*」，而它可以與文檔中的所有元素進行配對。這是一個很少在樣式表中看到的用法，但是universal selector很常被跟與ID選擇器或者class選擇器一起使用。Se o seletor universal não for o único componente de um seletor simples, o “\*” não deve ser usado :
+Universal selector 是由一個星號來代表，「\*」，而它可以與文檔中的所有元素進行配對。這是一個很少在樣式表中看到的用法，但是universal selector很常被跟與ID選擇器或者class選擇器一起使用。如果 universal selector是單獨的一個選擇器的話，「\*」，它不應該被使用：
 
   - .myclass 也等於 \*.myclass
   - \#myid 也等於 \*#myid
