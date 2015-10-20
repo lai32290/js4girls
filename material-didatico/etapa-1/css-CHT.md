@@ -84,7 +84,7 @@ p { font-size:2em; }
 p.info { background:#ff0; }
 ```
 
-你可以給一個元素許多個class - class 屬性可以包含許多個以空白鍵來分開的類別名稱。這樣子，那些類別可以被用來做許多class屬性的配對。以下規則將配對一個class屬性裡面包含「info」及[error」的「p」元素：
+你可以給一個元素許多個class - class 屬性可以包含許多個以空白鍵來分開的類別名稱。這樣子，那些類別可以被用來做許多class屬性的配對。以下規則將配對一個class屬性裡面包含「info」及「error」的「p」元素：
 
 ```css
 p.info.error { color:#900; font-weight:bold; }
