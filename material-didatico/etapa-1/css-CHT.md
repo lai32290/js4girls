@@ -77,16 +77,14 @@ p { font-size:2em; }
 ```
 
 ### 選擇器 - 類別
-### Seletor – classe
 
-類別的選擇器是用一個點來代表「.」，
-O seletor de classe é representado por um ponto, “.”, e tem como alvo elementos com um determinado valor para seu atributo class. A regra a seguir aplica-se a todo elemento parágrafo cuja classe tenha o nome “info”:
+類別的選擇器是用一個點來代表「.」，而它的目標元素是那些class屬性裡有對應值的元素。以下的規則將運用再所有class裡面「info」的段落上：
 
 ```css
 p.info { background:#ff0; }
 ```
 
-Você pode atribuir vários nomes para a classe de um elemento – o atributo class pode conter uma lista de vários nomes separados por espaço em branco. Assim, os seletores de classe podem ser usados para casar com elementos cuja classe contenha vários nomes. A regra a seguir casa com elementos p que tenham os nomes “info” e “error” declarados em seu atributo class:
+你可以給一個元素許多個class - class 屬性可以包含許多個以空白鍵來分開的類別名稱。這樣子，那些類別可以被用來做許多class屬性的配對。以下規則將配對一個class屬性裡面包含「info」及[error」的「p」元素：
 
 ```css
 p.info.error { color:#900; font-weight:bold; }
