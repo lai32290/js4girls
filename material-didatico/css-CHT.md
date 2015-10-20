@@ -35,7 +35,7 @@ p { color:#f00; }
 
 有兩種基本的選擇器：普通型與配對型。
 
-一個普通的選擇器是任何一個沒有包含屬性選擇器的，例如ID選擇器、類別選擇器或者偽元素選擇器。以下是一個普通選擇器的例子：
+一個普通的選擇器是任何一個沒有包含屬性選擇器的，例如ID選擇器、類別選擇器或者psudo-element選擇器。以下是一個普通選擇器的例子：
 
 ```css
 p.info { background:#ff0; }
@@ -66,18 +66,20 @@ Universal selecotr一個很常用的方法是用來將所有元素的margins與p
 * { margin:0; padding:0; }
 ```
 
-Este procedimento é também conhecido como `Global White Space Reset`.
+這個步驟也被稱作「Global White Space Reset」。
 
-## Seletores Tipo
+## Type Selector
 
-Um seletor tipo, casa com qualquer instância de um determinado tipo de elemento. A regra a seguir casa com qualquer elemento (do tipo) parágrafo no documento e configura seu tamanho de fonte para 2em:
+一個Type selector可以與任何一種元素配對。以下的例子可以與檔案中任何段落類型的元素配對，並且將字型大小設定成2em：
 
 ```css
 p { font-size:2em; }
 ```
 
+### 選擇器 - 類別
 ### Seletor – classe
 
+類別的選擇器是用一個點來代表「.」，
 O seletor de classe é representado por um ponto, “.”, e tem como alvo elementos com um determinado valor para seu atributo class. A regra a seguir aplica-se a todo elemento parágrafo cuja classe tenha o nome “info”:
 
 ```css
