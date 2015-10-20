@@ -36,32 +36,31 @@ p { color:#f00; }
 有兩種基本的選擇器：普通型與配對型。
 
 一個普通的選擇器是任何一個沒有包含屬性選擇器的，例如ID選擇器、類別選擇器或者偽元素選擇器。以下是一個普通選擇器的例子：
-Um seletor simples consiste em um tipo qualquer de seletor ou o seletor universal seguido por nenhum ou algum seletor de atributo, seletor tipo ID, seletor de classe ou pseudo-classe. A seguir uma regra contendo um exemplo de seletor simples:
 
 ```css
 p.info { background:#ff0; }
 ```
 
-Um seletor combinado (algumas vezes chamado de seletor contextual) consiste de dois ou mais seletores simples separados por um elemento de combinação. A seguir um exemplo de seletor combinado.
+一個combined selectors（有時候也稱作contextual selector）是包含兩個或者更多的simple selectors，由一個配對的元素來分開。以下來舉一個combined selector的例子。
 
 ```css
 div p { font-weight:bold; }
 ```
 
-A regra acima aplica-se a todo elemento p que seja descendente do elemento div.
+以上的規則會施加在所有div元素裡面的p元素上。
 
-Um pseudo-elemento pode ser colocado como apêndice a um seletor. Em seletores combinados, o pseudo-elemento somente poderá ser adicionado como apêndice ao último seletor simples.
+一個pseudo-element被當作一個選擇器的附加項目。在combined selectors中，pseudo-element只可以被附加在最後一個simple selector上。
 
-Mais a frente serão detalhados com mais profundidade os seletores combinados, os elementos de combinação e os pseudo-elementos.
+在後面一點將會更詳細的深入解釋關於combined selectors、元素的配對以及pseudo-elements。
 
-## Seletores Universal
+## Universal Selectors
 
-O seletor universal é representado por um asterisco, “\*”, e casa com todos os elementos do documento. É raro ver-se empregado em uma folha de estilos, mas o seletor universal é muito usado com seletores tipo ID e seletores de classe. Se o seletor universal não for o único componente de um seletor simples, o “\*” não deve ser usado :
+Universal selector 是由一個星號來代表，「\*」，而它可以與文檔中的所有元素進行配對。這是一個很少在樣式表中看到的用法，但是universal selector很常被跟與ID選擇器或者class選擇器一起使用。Se o seletor universal não for o único componente de um seletor simples, o “\*” não deve ser usado :
 
-  - .myclass é equivalente a \*.myclass
-  - \#myid é equivalente a \*#myid
+  - .myclass 也等於 \*.myclass
+  - \#myid 也等於 \*#myid
 
-Um uso bastante popular para o seletor universal é o uso para zerar margens e paddings de todos os elementos do documento:
+Universal selecotr一個很常用的方法是用來將所有元素的margins與paddings歸零：
 
 ```css
 * { margin:0; padding:0; }
