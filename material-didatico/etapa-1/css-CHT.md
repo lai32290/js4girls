@@ -41,26 +41,26 @@ p { color:#f00; }
 p.info { background:#ff0; }
 ```
 
-一個配對型選擇器（有時候也稱作上下文選擇器）是兩個或者更多個以配對元素分開的的普通選擇器。以下有一個配對選擇器的例子。
+一個combined selectors（有時候也稱作contextual selector）是包含兩個或者更多的simple selectors，由一個配對的元素來分開。以下來舉一個combined selector的例子。
 
 ```css
 div p { font-weight:bold; }
 ```
 
-上面的規則會套用在所有再div元素裡面的p元素。
+以上的規則會施加在所有div元素裡面的p元素上。
 
-一個pseudo-element可以被依附在一個選擇器上面。在一個配對型選擇器中，pseudo-element只可以被新增依附在最後一個普通的選擇器上。
+一個pseudo-element被當作一個選擇器的附加項目。在combined selectors中，pseudo-element只可以被附加在最後一個simple selector上。
 
-之後將會再更詳細的解釋關於配對選擇器、配對的元素以及pseudo-elements。
+在後面一點將會更詳細的深入解釋關於combined selectors、元素的配對以及pseudo-elements。
 
-## Universal Selector （通用選擇器）
+## Universal Selectors
 
-一個universal selector是以一個星號來代表（\*），他可以與文檔中所有的元素配對。是個不常在樣式表裡見到的選擇器，但是universal selector很常與ID選擇器及class選擇器一起用。如果universal selector不是某個普通選擇器的唯一部份，那就別用「\*」了：
+Universal selector 是由一個星號來代表，「\*」，而它可以與文檔中的所有元素進行配對。這是一個很少在樣式表中看到的用法，但是universal selector很常被跟與ID選擇器或者class選擇器一起使用。如果 universal selector是單獨的一個選擇器的話，「\*」，它不應該被使用：
 
-  - .myclass 等於 \*.myclass
-  - \#myid 等於 \*#myid
+  - .myclass 也等於 \*.myclass
+  - \#myid 也等於 \*#myid
 
-Universal selector的一個常用的用法是用來把文檔中所有元素的margin跟padding歸零：
+Universal selecotr一個很常用的方法是用來將所有元素的margins與paddings歸零：
 
 ```css
 * { margin:0; padding:0; }
